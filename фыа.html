@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Warpolit PVP - YouTube фон</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Контейнер для YouTube фона */
+    .youtube-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      overflow: hidden;
+    }
+
+    .youtube-bg iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    /* Затемнение */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 50px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 64px;
+      color: #ffaa66;
+      text-shadow: 0 0 20px #ff4400;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- YouTube видео как фон -->
+  <div class="youtube-bg">
+    <iframe
+      src="https://www.youtube.com/embed/zoTXFdkuqqM?autoplay=1&mute=1&loop=1&playlist=zoTXFdkuqqM&controls=0&showinfo=0&rel=0"
+      frameborder="0"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1>⚔️ WARPOLIT PVP ⚔️</h1>
+    <p>Самый жёсткий PVP сервер</p>
+  </div>
+
+</body>
+</html>
